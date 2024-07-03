@@ -1,15 +1,14 @@
 import React from 'react';
-import { Form, Stack } from 'react-bootstrap';
+import { Form} from 'react-bootstrap';
 
 const DatosPersonales = () => {
   return (
-      <Form>
-        <Form.Label>Datos personales:</Form.Label>
-        <Stack className='mx-auto' direction="horizontal" gap={1}>
-          <Form.ControlInput type="text" placeholder="Nombre / nombres" />
-          <Form.ControlInput type="text" placeholder="Apellido / apellidos" />
-        </Stack>
-      </Form>   
+    <Form.Group className="mb-3">
+      <Form.Label>Datos personales:</Form.Label>
+      <Form.Control size="sm" type="text" placeholder="Nombre / nombres" />
+      <br/>
+      <Form.Control size="sm" type="text" placeholder="Apellido / apellidos" />
+    </Form.Group>  
   );
 };
 

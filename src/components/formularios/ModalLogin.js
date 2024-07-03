@@ -5,9 +5,11 @@ import Modal from 'react-bootstrap/Modal';
 import { Link } from 'react-router-dom';
 import FechaNacimiento from './FechaNacimiento';
 import SexoFormulario from './SexoFormulario';
-import EmailRegistro from './EmailPass';
+import EmailRegistro from './EmailRegistro';
+import EmailLogin from './EmailLogin';
 import { Stack } from 'react-bootstrap';
 import ChekAviso from './ChekAviso';
+import DatosPersonales from './DatosPersonales';
 
 export default function ModalLogin() {
     const [showRegistroModal, setShowRegistroModal] = useState(false);
@@ -32,8 +34,10 @@ export default function ModalLogin() {
 
     return (
         <>
-            <Button variant="outline-primary" onClick={openRegistroModal}>REGISTRO</Button>
-            <Button variant="outline-success" onClick={openLoginModal}>LOGIN</Button>
+            <Stack className='p-5' direction="horizontal" gap={2}>
+                <Button variant="outline-primary" onClick={openRegistroModal}>REGISTRO</Button>
+                <Button variant="outline-success" onClick={openLoginModal}>LOGIN</Button>
+            </Stack>
 
             <Modal show={showRegistroModal} onHide={closeRegistroModal}>
                 <Modal.Header closeButton>
@@ -41,12 +45,7 @@ export default function ModalLogin() {
                 </Modal.Header>
                 <Modal.Body>
                     <Form onSubmit={handleRegistroSubmit}>
-                        <Form.Group className="mb-3">
-                            <Form.Label>Datos personales:</Form.Label>
-                            <Form.Control size="sm" type="text" placeholder="Nombre / nombres" />
-                            <br/>
-                            <Form.Control size="sm" type="text" placeholder="Apellido / apellidos" />
-                        </Form.Group>
+                        <DatosPersonales/>
                         <SexoFormulario />
                         <FechaNacimiento />
                         <EmailRegistro/>
@@ -65,20 +64,15 @@ export default function ModalLogin() {
                 </Modal.Header>
                 <Modal.Body>
                     <Form onSubmit={handleLoginSubmit}>
-                        <Form.Group className="mb-3">
-                            <Form.Label>Correo electrónico:</Form.Label>
-                            <Form.Control size="sm" type="text" placeholder="correoelectronico@dominio.com" />
-                            <Form.Label>Contraseña:</Form.Label>
-                            <Form.Control size="sm" type="password" placeholder="" />
-                        </Form.Group>
+                        <EmailLogin/>
                         <br />
                         <div className='p-4'>
                             <Link to='/lost'>¿Olvidaste la contraseña?</Link>
                         </div>
-                        <div className='p-5'>
+                        <Stack className='p-5' direction="vertical" gap={2}>
                             <Button variant="primary" type="submit">INICIAR SESIÓN</Button>
                             <Button variant="danger" onClick={closeLoginModal}>CERRAR</Button>
-                        </div>
+                        </Stack>
                     </Form>
                 </Modal.Body>
             </Modal>
