@@ -66,7 +66,7 @@ export default function ModalLogin() {
                     <Form onSubmit={handleLoginSubmit}>
                         <EmailLogin/>
                         <br />
-                        <div className='p-4'>
+                        <div className='p-4 d-flex justify-content-center'>
                             <Link to='/lost'>¿Olvidaste la contraseña?</Link>
                         </div>
                         <Stack className='p-5' direction="vertical" gap={2}>
