@@ -4,10 +4,10 @@ import Footer from '../../navegación/Footer';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import Pagination from 'react-bootstrap/Pagination';
 import Card from 'react-bootstrap/Card';
 import MenuDesplegable from '../../navegación/MenuDesplegable';
 import Image from 'react-bootstrap/Image';
+import NavegadorConocenos from '../../navegación/NavegadorConocenos';
 
 
 export default function Trayectoria(){
@@ -34,7 +34,7 @@ function PageTrayectoria(){
           <Col xs='auto'><MenuDesplegable/></Col>
           <Col>
             <Row>
-              <Col xs='auto' className="mx-auto"><NavegadorTrayectoria/></Col>
+              <Col xs='auto' className="mx-auto"><NavegadorConocenos/></Col>
             </Row>
             <Row>
               <Col>
@@ -63,20 +63,6 @@ function PageTrayectoria(){
         </Row>
       </Container>
     </div>
-  );
-}
-
-function NavegadorTrayectoria(){
-  return(
-    <Pagination className='NavButton'>
-      <Pagination.Prev />
-      <Pagination.Item>{'¿Quiénes somos?'}</Pagination.Item>
-      <Pagination.Item>{'Misión'}</Pagination.Item>
-      <Pagination.Item>{'Visión'}</Pagination.Item>
-      <Pagination.Item  active>{'Trayectoria'}</Pagination.Item>
-      <Pagination.Item >{'Estructura organizacional'}</Pagination.Item>
-      <Pagination.Next />
-    </Pagination>
   );
 }
 

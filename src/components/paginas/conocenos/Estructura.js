@@ -7,7 +7,7 @@ import MenuDesplegable from '../../navegación/MenuDesplegable';
 import NavbarUp from '../../navegación/NavbarUp';
 import Footer from '../../navegación/Footer';
 import Accordion from 'react-bootstrap/Accordion';
-import Pagination from 'react-bootstrap/Pagination';
+import NavegadorConocenos from '../../navegación/NavegadorConocenos';
 
 
 export default function Estructura() {
@@ -29,12 +29,12 @@ export default function Estructura() {
 function EstructuraOrg(){
   return(
     <div>
-      <Container fluid='true' className="d-flex justify-content-center">
+      <Container fluid='true'>
         <Row>
           <Col xs='auto'><MenuDesplegable/></Col>
           <Col>
             <Row>
-              <Col xs='auto' className="mx-auto"><NavegadorEstructura/></Col>
+              <Col xs='auto' className="mx-auto"><NavegadorConocenos/></Col>
             </Row>
             <Row>
               <Image src="../imagenes/estructura.jpg" fluid/>
@@ -46,20 +46,6 @@ function EstructuraOrg(){
         </Row>
       </Container>
     </div>
-  );
-}
-
-function NavegadorEstructura(){
-  return(
-    <Pagination className='NavButton'>
-      <Pagination.Prev />
-      <Pagination.Item>{'¿Quiénes somos?'}</Pagination.Item>
-      <Pagination.Item>{'Misión'}</Pagination.Item>
-      <Pagination.Item>{'Visión'}</Pagination.Item>
-      <Pagination.Item >{'Trayectoria'}</Pagination.Item>
-      <Pagination.Item active>{'Estructura organizacional'}</Pagination.Item>
-      <Pagination.Next />
-    </Pagination>
   );
 }
 

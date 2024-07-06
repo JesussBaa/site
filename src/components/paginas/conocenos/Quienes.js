@@ -4,10 +4,10 @@ import Footer from '../../navegación/Footer';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import Pagination from 'react-bootstrap/Pagination';
 import Card from 'react-bootstrap/Card';
 import MenuDesplegable from '../../navegación/MenuDesplegable';
 import Image from 'react-bootstrap/esm/Image';
+import NavegadorConocenos from '../../navegación/NavegadorConocenos';
 
 
 
@@ -36,7 +36,7 @@ function QuinesSomos(){
           <Col xs='auto'><MenuDesplegable/></Col>
           <Col>
             <Row>
-              <Col xs='auto' className="mx-auto"><Navegador/></Col>
+              <Col xs='auto' className="mx-auto"><NavegadorConocenos/></Col>
             </Row>
             <Row>
               <Col>
@@ -50,21 +50,6 @@ function QuinesSomos(){
         </Row>
       </Container>
     </div>
-  );
-}
-
-
-function Navegador(){
-  return(
-    <Pagination className='NavButton'>
-      <Pagination.Prev />
-      <Pagination.Item active>{'¿Quiénes somos?'}</Pagination.Item>
-      <Pagination.Item>{'Misión'}</Pagination.Item>
-      <Pagination.Item>{'Visión'}</Pagination.Item>
-      <Pagination.Item>{'Trayectoria'}</Pagination.Item>
-      <Pagination.Item >{'Estructura organizacional'}</Pagination.Item>
-      <Pagination.Next />
-    </Pagination>
   );
 }
 

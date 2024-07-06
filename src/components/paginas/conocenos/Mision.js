@@ -4,10 +4,10 @@ import Footer from '../../navegación/Footer';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import Pagination from 'react-bootstrap/Pagination';
 import Card from 'react-bootstrap/Card';
 import MenuDesplegable from '../../navegación/MenuDesplegable';
 import Image from 'react-bootstrap/esm/Image';
+import NavegadorConocenos from '../../navegación/NavegadorConocenos';
 
 
 
@@ -35,7 +35,7 @@ function PageMision(){
           <Col xs='auto'><MenuDesplegable/></Col>
           <Col>
             <Row>
-              <Col xs='auto' className="mx-auto"><NavegadorMision/></Col>
+              <Col xs='auto' className="mx-auto"><NavegadorConocenos/></Col>
             </Row>
             <Row>
               <Col>
@@ -49,22 +49,6 @@ function PageMision(){
         </Row>
       </Container>
     </div>
-  );
-}
-
-
-function NavegadorMision(){
-  return(
-    <Pagination className='NavButton'>
-      <Pagination.Prev />
-      <Pagination.Item>{'¿Quiénes somos?'}           
-      </Pagination.Item>
-      <Pagination.Item active>{'Misión'}</Pagination.Item>
-      <Pagination.Item>{'Visión'}</Pagination.Item>
-      <Pagination.Item>{'Trayectoria'}</Pagination.Item>
-      <Pagination.Item >{'Estructura organizacional'}</Pagination.Item>
-      <Pagination.Next />
-    </Pagination>
   );
 }
 
